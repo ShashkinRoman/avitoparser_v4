@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e41516d8-5d73-4c20-ad56-fe634729f4fd" name="Default Changelist" comment="" />
+    <list default="true" id="e41516d8-5d73-4c20-ad56-fe634729f4fd" name="Default Changelist" comment="&quot;first&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,7 +38,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="$PROJECT_DIR$/../bbreports36/venv/bin/python" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -88,12 +90,38 @@
       <workItem from="1591682944368" duration="623000" />
       <workItem from="1591769845180" duration="37000" />
       <workItem from="1593066315014" duration="5744000" />
-      <workItem from="1593148692446" duration="670000" />
+      <workItem from="1593148692446" duration="1586000" />
     </task>
+    <task id="LOCAL-00001" summary="&quot;first&quot;">
+      <created>1593149471505</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1593149471505</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&quot;first&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;first&quot;" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="262" y="120" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593150279268">
+      <screen x="0" y="32" width="1600" height="868" />
+    </state>
+    <state x="262" y="120" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.32.1600.868@0.32.1600.868" timestamp="1593150279268" />
+    <state x="571" y="205" width="454" height="517" key="FileChooserDialogImpl" timestamp="1593149360537">
+      <screen x="0" y="32" width="1600" height="868" />
+    </state>
+    <state x="571" y="205" width="454" height="517" key="FileChooserDialogImpl/0.32.1600.868@0.32.1600.868" timestamp="1593149360537" />
+    <state x="398" y="184" width="800" height="560" key="Vcs.Push.Dialog.v2" timestamp="1593149584881">
+      <screen x="0" y="32" width="1600" height="868" />
+    </state>
+    <state x="398" y="184" width="800" height="560" key="Vcs.Push.Dialog.v2/0.32.1600.868@0.32.1600.868" timestamp="1593149584881" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
