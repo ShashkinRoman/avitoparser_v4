@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e41516d8-5d73-4c20-ad56-fe634729f4fd" name="Default Changelist" comment="&quot;first&quot;">
+    <list default="true" id="e41516d8-5d73-4c20-ad56-fe634729f4fd" name="Default Changelist" comment="&quot;add requirements&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opera_driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/opera_driver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webdriver/webdriver_conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/webdriver/webdriver_conf.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +29,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bb_reports" />
+    <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
   </component>
   <component name="RunManager">
     <configuration name="parser" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -90,7 +92,9 @@
       <workItem from="1591682944368" duration="623000" />
       <workItem from="1591769845180" duration="37000" />
       <workItem from="1593066315014" duration="5744000" />
-      <workItem from="1593148692446" duration="1586000" />
+      <workItem from="1593148692446" duration="3010000" />
+      <workItem from="1593153773097" duration="1894000" />
+      <workItem from="1593155687086" duration="11204000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;first&quot;">
       <created>1593149471505</created>
@@ -99,7 +103,21 @@
       <option name="project" value="LOCAL" />
       <updated>1593149471505</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="&quot;add requirements&quot;">
+      <created>1593150541087</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1593150541087</updated>
+    </task>
+    <task id="LOCAL-00003" summary="&quot;add requirements&quot;">
+      <created>1593150561749</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1593150561749</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,21 +125,30 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;first&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;first&quot;" />
+    <MESSAGE value="&quot;add requirements&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;add requirements&quot;" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="262" y="120" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593150279268">
+    <state x="262" y="104" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593153699084">
       <screen x="0" y="32" width="1600" height="868" />
     </state>
-    <state x="262" y="120" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.32.1600.868@0.32.1600.868" timestamp="1593150279268" />
-    <state x="571" y="205" width="454" height="517" key="FileChooserDialogImpl" timestamp="1593149360537">
+    <state x="262" y="104" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.32.1600.868@0.32.1600.868" timestamp="1593153699084" />
+    <state x="571" y="197" width="454" height="517" key="FileChooserDialogImpl" timestamp="1593178345243">
       <screen x="0" y="32" width="1600" height="868" />
     </state>
-    <state x="571" y="205" width="454" height="517" key="FileChooserDialogImpl/0.32.1600.868@0.32.1600.868" timestamp="1593149360537" />
-    <state x="398" y="184" width="800" height="560" key="Vcs.Push.Dialog.v2" timestamp="1593149584881">
+    <state x="571" y="197" width="454" height="517" key="FileChooserDialogImpl/0.32.1600.868@0.32.1600.868" timestamp="1593178345243" />
+    <state x="292" y="97" width="1016" height="734" key="SettingsEditor" timestamp="1593153733825">
       <screen x="0" y="32" width="1600" height="868" />
     </state>
-    <state x="398" y="184" width="800" height="560" key="Vcs.Push.Dialog.v2/0.32.1600.868@0.32.1600.868" timestamp="1593149584881" />
+    <state x="292" y="97" width="1016" height="734" key="SettingsEditor/0.32.1600.868@0.32.1600.868" timestamp="1593153733825" />
+    <state x="398" y="168" width="800" height="560" key="Vcs.Push.Dialog.v2" timestamp="1593150566464">
+      <screen x="0" y="32" width="1600" height="868" />
+    </state>
+    <state x="398" y="168" width="800" height="560" key="Vcs.Push.Dialog.v2/0.32.1600.868@0.32.1600.868" timestamp="1593150566464" />
+    <state x="574" y="377" width="452" height="174" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593153213747">
+      <screen x="0" y="32" width="1600" height="868" />
+    </state>
+    <state x="574" y="377" width="452" height="174" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.32.1600.868@0.32.1600.868" timestamp="1593153213747" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
