@@ -32,13 +32,12 @@ def get_urls_from_page(url_page, ads_obj, session, request, region, proxy_list: 
     try:
         header, proxies = header_proxy(proxy_list)
         html = requests.get(url_page, headers=header, proxies=proxies).text
-    except ProxyError or ChunkedEncodingError as exc:
-        print('change proxy', exc)
-        counter_proxy += 1
+    except ProxyError or ChunkedEncodingError:
+        get_urls_from_page(url_page, ads_obj, session, request, region, proxy_list)
+        print('change proxy')
+        counter_proxy +=1
         if counter_proxy == len(proxy_list):
             print("all proxy used and don't work")
-        get_urls_from_page(url_page, ads_obj, session, request, region, proxy_list)
-
     # html = requests.get(url_page, proxies=proxies).text
     soup = BeautifulSoup(html, 'html.parser')
     pages = soup.find_all(attrs={"class": "item__line"})
@@ -68,25 +67,25 @@ def get_urls_from_page(url_page, ads_obj, session, request, region, proxy_list: 
 def main():
     regions = json.loads(os.getenv('regions_for_pars'))
     requests_ = json.loads(os.getenv('requests'))
-    proxy_list = proxy_parse(os.getenv('url_proxy'))
 
+    proxy_list = proxy_parse(os.getenv('url_proxy'))
     for region in regions:
         for request in requests_:
+            session = session_db()
             ads_obj = []
             url = Urls().urls(region, request)
             counter = 0
-            database_name = request + region
-            session = session_db(database_name)
             for i in range(1, 100):
                 start = len(ads_obj)
                 counter_proxy = 0
-                print(start)
+                # print(start)
                 sleep(random.randint(1, 2))
                 url_page = url + str(i)
                 end = get_urls_from_page(url_page, ads_obj,
-                    session, request, region, proxy_list, counter_proxy)
-                print(end)
-                print(i)
+                                         session, request, region,
+                                         proxy_list, counter_proxy)
+                # print(end)
+                # print(i)
                 if start == end:
                     counter += 1
                     if counter == 5:
@@ -96,9 +95,9 @@ def main():
                 a_db = UrlsForParse(**a)
                 session.add(a_db)
             session.commit()
-            session.close()
             print('quantity added urls {} query {}, region {} is over, {}'
                   .format(len(ads_obj), request, region, datetime.now()))
+            session.close()
 
 
 if __name__ == '__main__':

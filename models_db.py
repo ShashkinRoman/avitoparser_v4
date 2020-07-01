@@ -21,8 +21,8 @@ class UrlsForParse(Base):
     status = Column(Integer)
 
 
-def session_db(database_name):
-    engine = create_engine('sqlite:///' + database_name + '.db',
+def session_db():
+    engine = create_engine('sqlite:///' + os.getenv('database_name') + '.db',
                            connect_args={'check_same_thread':  False},
                            poolclass=StaticPool)
     session_object = sessionmaker()
