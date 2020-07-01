@@ -2,41 +2,55 @@
 # todo нужно проверять страницу блокировки, а не счетчики, потому что может не быть обхектов на странице
 import os
 import json
+import random
 import requests
+from requests.exceptions import ProxyError, ChunkedEncodingError
 from time import sleep
 from bs4 import BeautifulSoup
 from datetime import datetime, timedelta
-from concurrent.futures.thread import ThreadPoolExecutor
-from config import Urls, session_db
+from config import Urls, session_db, proxy_parse, header_proxy
 from models_db import UrlsForParse, session_db
-from sqlalchemy.orm.exc import NoResultFound
+from sqlalchemy.orm.exc import NoResultFound, MultipleResultsFound
+from fake_useragent import UserAgent
 from dotenv import load_dotenv
 load_dotenv()
 
 
-def get_urls_from_page(url_page, ads_obj, session, request, region):
-    """check url in base and write, if not found
-    if get ban from avito sleep on 30 min and print time"""
-    html = requests.get(url_page).text
+def get_urls_from_page(url_page, ads_obj, session, request, region, proxy_list: list, counter_proxy):
+    """
+
+    :param url_page:
+    :param ads_obj:
+    :param session:
+    :param request:
+    :param region:
+    :param proxy_list:
+    :param counter_proxy:
+    :return:
+    """
+
+    try:
+        header, proxies = header_proxy(proxy_list)
+        html = requests.get(url_page, headers=header, proxies=proxies).text
+    except ProxyError or ChunkedEncodingError as exc:
+        print('change proxy', exc)
+        counter_proxy += 1
+        if counter_proxy == len(proxy_list):
+            print("all proxy used and don't work")
+        get_urls_from_page(url_page, ads_obj, session, request, region, proxy_list)
+
+    # html = requests.get(url_page, proxies=proxies).text
     soup = BeautifulSoup(html, 'html.parser')
     pages = soup.find_all(attrs={"class": "item__line"})
-    # check len ads_onj on 10 page, for understand have ban or no.
-    # If have, sleep 30 min and write sleep time, and restart function
-    # if i == 5:
-    #     if len(ads_obj.urls_ads) == 0:
-    #         clock_in_half_hour = datetime.now() + timedelta(minutes=30)
-    #         print(f'ban from avito {datetime.today().strftime("%Y-%m-%d-%H.%M")}, '
-    #               f'sleep until {clock_in_half_hour.strftime("%Y-%m-%d-%H.%M")}')
-    #         sleep(1800)
-    #         get_urls_from_page(url_page, ads_obj, session)
     counter = 0
     for page in pages:
         link = page.find_all(attrs={"class": "snippet-link"})[0]
-        # check url in database and skip if have
         try:
             session.query(UrlsForParse).filter(
                 UrlsForParse.url == link.attrs['href']).one()
-            print('jopa')
+            counter += 1
+        except MultipleResultsFound:
+            counter += 1
         except NoResultFound:
             ads_obj.append({'request': request,
                             'region': region,
@@ -44,30 +58,47 @@ def get_urls_from_page(url_page, ads_obj, session, request, region):
                             'url': link.attrs['href'],
                             'status': 0,
                             })
+        if counter >= 50:
+            break
+    # print('query {}, region {} is over, {}'.format(request, region, datetime.now()))
+    check = len(ads_obj)
+    return check
 
-
-
-        # except:  # todo add check 'NoResultFound' and write in base
-        #     ads_obj.urls_ads.append(link.attrs['href'])
-        # 
 
 def main():
     regions = json.loads(os.getenv('regions_for_pars'))
     requests_ = json.loads(os.getenv('requests'))
-    session = session_db()
-    ads_obj = []
+    proxy_list = proxy_parse(os.getenv('url_proxy'))
+
     for region in regions:
         for request in requests_:
+            ads_obj = []
             url = Urls().urls(region, request)
-            with ThreadPoolExecutor(max_workers=2) as executor:
-                for i in range(1, 30):
-                    url_page = url + str(i)
-                    threads_ads = executor.submit(
-                        get_urls_from_page, url_page, ads_obj,
-                        session, i, request, region)
+            counter = 0
+            database_name = request + region
+            session = session_db(database_name)
+            for i in range(1, 100):
+                start = len(ads_obj)
+                counter_proxy = 0
+                print(start)
+                sleep(random.randint(1, 2))
+                url_page = url + str(i)
+                end = get_urls_from_page(url_page, ads_obj,
+                    session, request, region, proxy_list, counter_proxy)
+                print(end)
+                print(i)
+                if start == end:
+                    counter += 1
+                    if counter == 5:
+                        break
 
-
-    pass
+            for a in ads_obj:
+                a_db = UrlsForParse(**a)
+                session.add(a_db)
+            session.commit()
+            session.close()
+            print('quantity added urls {} query {}, region {} is over, {}'
+                  .format(len(ads_obj), request, region, datetime.now()))
 
 
 if __name__ == '__main__':

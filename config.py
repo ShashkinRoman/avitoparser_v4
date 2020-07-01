@@ -1,13 +1,35 @@
 import os
 from builtins import object
+import requests
+from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.pool import StaticPool
+from fake_useragent import UserAgent
 load_dotenv()
 
+
+def proxy_parse(url_proxy):
+    html = requests.get(url_proxy).text
+    soup = BeautifulSoup(html, 'html.parser')
+    ip_list = soup.find_all("input", class_="ch")
+    for i in range(0, len(ip_list)):
+        ip_list[i] = ip_list[i]['value']
+    return ip_list
+
+
+def header_proxy(proxy_list):
+    proxy = proxy_list.pop(0)
+    proxy_list.append(proxy)
+    ua = UserAgent()
+    header = {'User-Agent': str(ua.chrome)}
+    proxies = {"http": "http://{}".format(proxy),
+               # "https": "http://{}".format(proxy)
+               }
+    return header, proxies
 
 class Ads:
     """ Принимает урлы каждого из объявлений
@@ -34,7 +56,7 @@ class Urls(object):
     def urls(self, region, avito_request):
         if self.object_parse == 'beauty':
             url = 'https://www.avito.ru/' + region\
-                  + '/predlozheniya_uslug/krasota_zdorove?q='\
+                  + '/predlozheniya_uslug/krasota_zdorove-ASgBAgICAUSYC6qfAQ?q='\
                   + avito_request + '&p='
 
         if self.object_parse == 'nedvij_studii_vtorich':
