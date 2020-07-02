@@ -31,6 +31,7 @@ def header_proxy(proxy_list):
                }
     return header, proxies
 
+
 class Ads:
     """ Принимает урлы каждого из объявлений
     и информацю для последующей записи в бд """
@@ -100,16 +101,16 @@ class InformationFromAds(Base):
                   self.type_ads, self.region, self.url)
 
 
-
 def session_db():
     engine = create_engine('sqlite:///' + os.getenv('database_name') + '.db',
-                           connect_args={'check_same_thread':False},
-                    poolclass=StaticPool)
+                           connect_args={'check_same_thread': False},
+                           poolclass=StaticPool)
     session_object = sessionmaker()
     session_object.configure(bind=engine)
     Base.metadata.create_all(engine)
     session = session_object()
     return session
+
 
 # test = InformationFromAds('phone', 'name', 'title', 'price', 'place', 'description', 'type_ads', 'region', 'url')
 def main():

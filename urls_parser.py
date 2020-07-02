@@ -1,10 +1,9 @@
-# todo придумать способ как импортировать списки регионов и запросов
-# todo нужно проверять страницу блокировки, а не счетчики, потому что может не быть обхектов на странице
+# todo проверять не только из бд есть ли дубли, но и из тез которые уже спарсили
 import os
 import json
 import random
 import requests
-from requests.exceptions import ProxyError, ChunkedEncodingError
+from requests.exceptions import ProxyError, ChunkedEncodingError, ConnectionError
 from time import sleep
 from bs4 import BeautifulSoup
 from datetime import datetime, timedelta
@@ -32,7 +31,7 @@ def get_urls_from_page(url_page, ads_obj, session, request, region, proxy_list: 
     try:
         header, proxies = header_proxy(proxy_list)
         html = requests.get(url_page, headers=header, proxies=proxies).text
-    except ProxyError or ChunkedEncodingError:
+    except ProxyError or ChunkedEncodingError or ConnectionError:
         get_urls_from_page(url_page, ads_obj, session, request, region, proxy_list)
         print('change proxy')
         counter_proxy +=1
@@ -67,7 +66,6 @@ def get_urls_from_page(url_page, ads_obj, session, request, region, proxy_list: 
 def main():
     regions = json.loads(os.getenv('regions_for_pars'))
     requests_ = json.loads(os.getenv('requests'))
-
     proxy_list = proxy_parse(os.getenv('url_proxy'))
     for region in regions:
         for request in requests_:

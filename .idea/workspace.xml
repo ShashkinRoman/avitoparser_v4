@@ -19,9 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e41516d8-5d73-4c20-ad56-fe634729f4fd" name="Default Changelist" comment="&quot;first&quot;">
+    <list default="true" id="e41516d8-5d73-4c20-ad56-fe634729f4fd" name="Default Changelist" comment="&quot;add models_db.py, main.py, urls_parser.py, need finish&quot;">
+      <change afterPath="$PROJECT_DIR$/date_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/avitoparser.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/avitoparser.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/models_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opera_driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/opera_driver.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/urls_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/urls_parser.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +43,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1avpurA7GsHC4OrXl4MMklk8A9k" />
@@ -48,12 +59,12 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/date_parser.py" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
   </component>
   <component name="RunManager">
-    <configuration name="parser" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="date_parser" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="avitoparser" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -76,7 +87,7 @@
           <ENTRY IS_ENABLED="true" PARSER="runconfig" />
         </ENTRIES>
       </EXTENSION>
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/parser.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/date_parser.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -117,8 +128,12 @@
       <workItem from="1593421985602" duration="259000" />
       <workItem from="1593422255058" duration="2747000" />
       <workItem from="1593425028130" duration="4733000" />
-      <workItem from="1593433246835" duration="11592000" />
-      <workItem from="1593604440188" duration="705000" />
+      <workItem from="1593433246835" duration="11809000" />
+      <workItem from="1593501706303" duration="19825000" />
+      <workItem from="1593589616516" duration="8078000" />
+      <workItem from="1593598231546" duration="4357000" />
+      <workItem from="1593602614432" duration="4260000" />
+      <workItem from="1593669421198" duration="12970000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;first&quot;">
       <created>1593149471505</created>
@@ -127,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593149471505</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="&quot;add models_db.py, main.py, urls_parser.py, need finish&quot;">
+      <created>1593446363812</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1593446363813</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,18 +169,60 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;first&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;first&quot;" />
+    <MESSAGE value="&quot;add models_db.py, main.py, urls_parser.py, need finish&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;add models_db.py, main.py, urls_parser.py, need finish&quot;" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="262" y="120" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593150279268">
+    <state x="262" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593678776725">
       <screen x="0" y="32" width="1600" height="868" />
     </state>
-    <state x="262" y="120" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.32.1600.868@0.32.1600.868" timestamp="1593150279268" />
-    <state x="685" y="237" width="454" height="517" key="FileChooserDialogImpl" timestamp="1593422211201">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="314" y="134" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1593521828140" />
+    <state x="262" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.32.1600.868@0.32.1600.868" timestamp="1593678776725" />
+    <state x="571" y="197" width="424" height="484" key="FileChooserDialogImpl" timestamp="1593678772688">
+      <screen x="0" y="32" width="1600" height="868" />
     </state>
-    <state x="685" y="237" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1593422211201" />
-    <state x="571" y="205" width="454" height="517" key="FileChooserDialogImpl/0.32.1600.868@0.32.1600.868" timestamp="1593149360537" />
+    <state x="685" y="237" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1593521826836" />
+    <state x="571" y="197" width="454" height="517" key="FileChooserDialogImpl/0.32.1600.868@0.32.1600.868" timestamp="1593678772688" />
+    <state width="1554" height="270" key="GridCell.Tab.0.bottom" timestamp="1593684596230">
+      <screen x="0" y="32" width="1600" height="868" />
+    </state>
+    <state width="1874" height="489" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1593591777509" />
+    <state width="1554" height="270" key="GridCell.Tab.0.bottom/0.32.1600.868@0.32.1600.868" timestamp="1593684596230" />
+    <state width="1554" height="270" key="GridCell.Tab.0.center" timestamp="1593684596229">
+      <screen x="0" y="32" width="1600" height="868" />
+    </state>
+    <state width="1874" height="489" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1593591777509" />
+    <state width="1554" height="270" key="GridCell.Tab.0.center/0.32.1600.868@0.32.1600.868" timestamp="1593684596229" />
+    <state width="1554" height="270" key="GridCell.Tab.0.left" timestamp="1593684596229">
+      <screen x="0" y="32" width="1600" height="868" />
+    </state>
+    <state width="1874" height="489" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1593591777508" />
+    <state width="1554" height="270" key="GridCell.Tab.0.left/0.32.1600.868@0.32.1600.868" timestamp="1593684596229" />
+    <state width="1554" height="270" key="GridCell.Tab.0.right" timestamp="1593684596230">
+      <screen x="0" y="32" width="1600" height="868" />
+    </state>
+    <state width="1874" height="489" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1593591777509" />
+    <state width="1554" height="270" key="GridCell.Tab.0.right/0.32.1600.868@0.32.1600.868" timestamp="1593684596230" />
+    <state width="1554" height="270" key="GridCell.Tab.1.bottom" timestamp="1593684676123">
+      <screen x="0" y="32" width="1600" height="868" />
+    </state>
+    <state width="1874" height="489" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1593591777510" />
+    <state width="1554" height="270" key="GridCell.Tab.1.bottom/0.32.1600.868@0.32.1600.868" timestamp="1593684676123" />
+    <state width="1554" height="270" key="GridCell.Tab.1.center" timestamp="1593684676117">
+      <screen x="0" y="32" width="1600" height="868" />
+    </state>
+    <state width="1874" height="489" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1593591777510" />
+    <state width="1554" height="270" key="GridCell.Tab.1.center/0.32.1600.868@0.32.1600.868" timestamp="1593684676117" />
+    <state width="1554" height="270" key="GridCell.Tab.1.left" timestamp="1593684676115">
+      <screen x="0" y="32" width="1600" height="868" />
+    </state>
+    <state width="1874" height="489" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1593591777509" />
+    <state width="1554" height="270" key="GridCell.Tab.1.left/0.32.1600.868@0.32.1600.868" timestamp="1593684676115" />
+    <state width="1554" height="270" key="GridCell.Tab.1.right" timestamp="1593684676122">
+      <screen x="0" y="32" width="1600" height="868" />
+    </state>
+    <state width="1874" height="489" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1593591777510" />
+    <state width="1554" height="270" key="GridCell.Tab.1.right/0.32.1600.868@0.32.1600.868" timestamp="1593684676122" />
     <state width="263" height="500" key="HiddenNamespacesPopup" timestamp="1593443399642">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -167,14 +231,16 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="508" y="215" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1593426784150" />
-    <state x="398" y="184" width="800" height="560" key="Vcs.Push.Dialog.v2" timestamp="1593149584881">
-      <screen x="0" y="32" width="1600" height="868" />
-    </state>
-    <state x="398" y="184" width="800" height="560" key="Vcs.Push.Dialog.v2/0.32.1600.868@0.32.1600.868" timestamp="1593149584881" />
-    <state width="960" height="527" key="XDebugger.FullValuePopup" timestamp="1593440821326">
+    <state x="478" y="211" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1593446427860">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="960" height="527" key="XDebugger.FullValuePopup/0.27.1920.1053@0.27.1920.1053" timestamp="1593440821326" />
+    <state x="478" y="211" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1593446427860" />
+    <state x="398" y="184" width="800" height="560" key="Vcs.Push.Dialog.v2/0.32.1600.868@0.32.1600.868" timestamp="1593149584881" />
+    <state width="800" height="435" key="XDebugger.FullValuePopup" timestamp="1593607108575">
+      <screen x="0" y="32" width="1600" height="868" />
+    </state>
+    <state width="960" height="527" key="XDebugger.FullValuePopup/0.27.1920.1053@0.27.1920.1053" timestamp="1593527872046" />
+    <state width="800" height="435" key="XDebugger.FullValuePopup/0.32.1600.868@0.32.1600.868" timestamp="1593607108575" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -184,7 +250,23 @@
           <line>42</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/urls_parser.py</url>
+          <line>71</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/date_parser.py</url>
+          <line>90</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/avitoparser$urls_parser.coverage" NAME="urls_parser Coverage Results" MODIFIED="1593601906462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/avitoparser_v4$parser.coverage" NAME="urls_parser Coverage Results" MODIFIED="1593528692030" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/avitoparser$date_parser.coverage" NAME="date_parser Coverage Results" MODIFIED="1593684516875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/avitoparser_v4$urls_parser.coverage" NAME="urls_parser Coverage Results" MODIFIED="1593591728980" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
