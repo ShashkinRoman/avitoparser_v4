@@ -19,7 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e41516d8-5d73-4c20-ad56-fe634729f4fd" name="Default Changelist" comment="&quot;add date_parser.py, need fixet opera driver, parser is work&quot;">
+    <list default="true" id="e41516d8-5d73-4c20-ad56-fe634729f4fd" name="Default Changelist" comment="&quot;micro fix&quot;">
+      <change afterPath="$PROJECT_DIR$/write_csv.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +52,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/date_parser.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bb_reports/product_recomendation.py" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
   </component>
@@ -128,7 +129,7 @@
       <workItem from="1593669421198" duration="13411000" />
       <workItem from="1593757906340" duration="24000" />
       <workItem from="1593761578140" duration="4145000" />
-      <workItem from="1593844140552" duration="2835000" />
+      <workItem from="1593844140552" duration="10235000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;first&quot;">
       <created>1593149471505</created>
@@ -151,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593684912639</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="&quot;micro fix&quot;">
+      <created>1593847944951</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1593847944951</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,7 +181,8 @@
     <MESSAGE value="&quot;first&quot;" />
     <MESSAGE value="&quot;add models_db.py, main.py, urls_parser.py, need finish&quot;" />
     <MESSAGE value="&quot;add date_parser.py, need fixet opera driver, parser is work&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;add date_parser.py, need fixet opera driver, parser is work&quot;" />
+    <MESSAGE value="&quot;micro fix&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;micro fix&quot;" />
   </component>
   <component name="WindowStateProjectService">
     <state x="262" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593678776725">
@@ -181,11 +190,11 @@
     </state>
     <state x="314" y="134" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1593521828140" />
     <state x="262" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.32.1600.868@0.32.1600.868" timestamp="1593678776725" />
-    <state x="571" y="197" width="424" height="484" key="FileChooserDialogImpl" timestamp="1593678772688">
+    <state x="571" y="189" width="424" height="484" key="FileChooserDialogImpl" timestamp="1593853555421">
       <screen x="0" y="32" width="1600" height="868" />
     </state>
     <state x="685" y="237" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1593521826836" />
-    <state x="571" y="197" width="454" height="517" key="FileChooserDialogImpl/0.32.1600.868@0.32.1600.868" timestamp="1593678772688" />
+    <state x="571" y="189" width="454" height="517" key="FileChooserDialogImpl/0.32.1600.868@0.32.1600.868" timestamp="1593853555421" />
     <state width="1554" height="270" key="GridCell.Tab.0.bottom" timestamp="1593684756037">
       <screen x="0" y="32" width="1600" height="868" />
     </state>
@@ -234,11 +243,11 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="508" y="215" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1593426784150" />
-    <state x="398" y="176" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1593684916044">
+    <state x="398" y="168" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1593847950219">
       <screen x="0" y="32" width="1600" height="868" />
     </state>
     <state x="478" y="211" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1593446427860" />
-    <state x="398" y="176" width="800" height="560" key="Vcs.Push.Dialog.v2/0.32.1600.868@0.32.1600.868" timestamp="1593684916044" />
+    <state x="398" y="168" width="800" height="560" key="Vcs.Push.Dialog.v2/0.32.1600.868@0.32.1600.868" timestamp="1593847950219" />
     <state width="800" height="435" key="XDebugger.FullValuePopup" timestamp="1593607108575">
       <screen x="0" y="32" width="1600" height="868" />
     </state>
