@@ -19,7 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e41516d8-5d73-4c20-ad56-fe634729f4fd" name="Default Changelist" comment="&quot;add write_csv.py, find request by url and save in csv&quot;" />
+    <list default="true" id="e41516d8-5d73-4c20-ad56-fe634729f4fd" name="Default Changelist" comment="&quot;add write_csv.py, find request by url and save in csv&quot;">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opera_driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/opera_driver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/write_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/write_csv.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,7 +55,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../face_identification" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
   </component>
@@ -127,6 +133,12 @@
       <workItem from="1593757906340" duration="24000" />
       <workItem from="1593761578140" duration="4145000" />
       <workItem from="1593844140552" duration="10493000" />
+      <workItem from="1594104915212" duration="2239000" />
+      <workItem from="1594116840714" duration="10437000" />
+      <workItem from="1594189779112" duration="3010000" />
+      <workItem from="1594274461497" duration="22000" />
+      <workItem from="1594284172848" duration="3477000" />
+      <workItem from="1594293982920" duration="1491000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;first&quot;">
       <created>1593149471505</created>
@@ -163,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593856913434</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="&quot;add write_csv.py, find request by url and save in csv&quot;">
+      <created>1594104929069</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1594104929069</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,11 +214,11 @@
     </state>
     <state x="314" y="134" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1593521828140" />
     <state x="262" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.32.1600.868@0.32.1600.868" timestamp="1593678776725" />
-    <state x="571" y="181" width="424" height="484" key="FileChooserDialogImpl" timestamp="1593856979928">
+    <state x="571" y="157" width="424" height="484" key="FileChooserDialogImpl" timestamp="1594295964864">
       <screen x="0" y="32" width="1600" height="868" />
     </state>
     <state x="685" y="237" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1593521826836" />
-    <state x="571" y="181" width="454" height="517" key="FileChooserDialogImpl/0.32.1600.868@0.32.1600.868" timestamp="1593856979928" />
+    <state x="571" y="157" width="454" height="517" key="FileChooserDialogImpl/0.32.1600.868@0.32.1600.868" timestamp="1594295964864" />
     <state width="1554" height="270" key="GridCell.Tab.0.bottom" timestamp="1593684756037">
       <screen x="0" y="32" width="1600" height="868" />
     </state>
@@ -248,11 +267,11 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="508" y="215" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1593426784150" />
-    <state x="398" y="160" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1593856917142">
+    <state x="398" y="144" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1594298925313">
       <screen x="0" y="32" width="1600" height="868" />
     </state>
     <state x="478" y="211" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1593446427860" />
-    <state x="398" y="160" width="800" height="560" key="Vcs.Push.Dialog.v2/0.32.1600.868@0.32.1600.868" timestamp="1593856917142" />
+    <state x="398" y="144" width="800" height="560" key="Vcs.Push.Dialog.v2/0.32.1600.868@0.32.1600.868" timestamp="1594298925313" />
     <state width="800" height="435" key="XDebugger.FullValuePopup" timestamp="1593607108575">
       <screen x="0" y="32" width="1600" height="868" />
     </state>

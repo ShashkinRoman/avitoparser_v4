@@ -28,6 +28,11 @@ def find_request(session):
 
 
 def write_in_csv(dicts_with_date):
+    """everime correct in .env
+     - path_csv
+     - database_name
+     - tablename
+     - ads_tablename т """
     path_csv = os.getenv('path_csv')
     with open(path_csv, 'w') as csvfile:
         writer = csv.writer(csvfile)
