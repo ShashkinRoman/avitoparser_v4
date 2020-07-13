@@ -19,11 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e41516d8-5d73-4c20-ad56-fe634729f4fd" name="Default Changelist" comment="&quot;add write_csv.py, find request by url and save in csv&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="e41516d8-5d73-4c20-ad56-fe634729f4fd" name="Default Changelist" comment="&quot;add checks on adsremoved on publication, add check on prce, description&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/date_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/date_parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opera_driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/opera_driver.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +151,7 @@
       <workItem from="1594366009559" duration="7516000" />
       <workItem from="1594448875218" duration="14939000" />
       <workItem from="1594478017872" duration="159000" />
-      <workItem from="1594622382989" duration="9602000" />
+      <workItem from="1594622382989" duration="10936000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;first&quot;">
       <created>1593149471505</created>
@@ -205,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594298942597</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="&quot;add checks on adsremoved on publication, add check on prce, description&quot;">
+      <created>1594637867583</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1594637867583</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,7 +233,8 @@
     <MESSAGE value="&quot;add date_parser.py, need fixet opera driver, parser is work&quot;" />
     <MESSAGE value="&quot;micro fix&quot;" />
     <MESSAGE value="&quot;add write_csv.py, find request by url and save in csv&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;add write_csv.py, find request by url and save in csv&quot;" />
+    <MESSAGE value="&quot;add checks on adsremoved on publication, add check on prce, description&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;add checks on adsremoved on publication, add check on prce, description&quot;" />
   </component>
   <component name="WindowStateProjectService">
     <state x="262" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593678776725">
@@ -290,11 +295,11 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="508" y="215" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1593426784150" />
-    <state x="398" y="120" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1594299226552">
+    <state x="398" y="104" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1594637872650">
       <screen x="0" y="32" width="1600" height="868" />
     </state>
     <state x="478" y="211" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1593446427860" />
-    <state x="398" y="120" width="800" height="560" key="Vcs.Push.Dialog.v2/0.32.1600.868@0.32.1600.868" timestamp="1594299226552" />
+    <state x="398" y="104" width="800" height="560" key="Vcs.Push.Dialog.v2/0.32.1600.868@0.32.1600.868" timestamp="1594637872650" />
     <state width="800" height="435" key="XDebugger.FullValuePopup" timestamp="1593607108575">
       <screen x="0" y="32" width="1600" height="868" />
     </state>
