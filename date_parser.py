@@ -11,8 +11,9 @@ from models_db import UrlsForParse, InformationFromAds
 from opera_driver import Operadriver, path
 from time import sleep
 from concurrent.futures.thread import ThreadPoolExecutor
-from selenium.common.exceptions import NoSuchElementException
-# '/habarovsk/predlozheniya_uslug/naraschivanie_resnits_1262920292'
+# from selenium.common.exceptions import NoSuchElementException
+
+
 def get_info_from_page(session, url, driver,
                        region, info_obj: list):
     sleep(random.randint(2, 5))
