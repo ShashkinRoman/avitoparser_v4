@@ -4,7 +4,11 @@ from selenium.webdriver.chrome import service
 from dotenv import load_dotenv
 load_dotenv()
 
-path = (os.getenv('opera_profile_one'), os.getenv('opera_profile_two'), os.getenv('opera_profile_three'), os.getenv('opera_profile_four'), os.getenv('opera_profile_five'))
+path = (os.getenv('opera_profile_one'),
+        # os.getenv('opera_profile_two'),
+        # os.getenv('opera_profile_three'),
+        # os.getenv('opera_profile_four'),
+        os.getenv('opera_profile_five'))
 
 
 class Operadriver():

@@ -8,7 +8,7 @@ import os
 import random
 from config import session_db
 from models_db import UrlsForParse, InformationFromAds
-from opera_driver import Operadriver, path
+from opera_driver import Operadriver, path as path_drivers
 from time import sleep
 from concurrent.futures.thread import ThreadPoolExecutor
 # from selenium.common.exceptions import NoSuchElementException
@@ -112,8 +112,7 @@ def get_info_from_page(session, url, driver,
                 "type_ads": type_ads,
                 "region": region,
                 "url": url}
-        values = list(ads_.values())
-        if values.count('None') == 0:
+        if ads_.get('phone') != "None":
             info_obj.append(ads_)
             a_db = InformationFromAds(**ads_)
             session.add(a_db)
@@ -150,10 +149,7 @@ def main():
     driver_class = Operadriver()
     start_driver = driver_class.start_driver()
     # driver = driver_class.opera(start_driver, path[0])
-    paths = (os.getenv('opera_profile_one'), os.getenv('opera_profile_two'),
-             # os.getenv('opera_profile_three'), os.getenv('opera_profile_four'),
-             # os.getenv('opera_profile_five')
-             )
+    paths = path_drivers
     drivers = []
     urls_regions =[]
     [urls_regions.append((url.url, url.region)) for url in urls_obj]
