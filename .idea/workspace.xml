@@ -19,10 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e41516d8-5d73-4c20-ad56-fe634729f4fd" name="Default Changelist" comment="&quot;add checks on adsremoved on publication, add check on prce, description&quot;">
+    <list default="true" id="e41516d8-5d73-4c20-ad56-fe634729f4fd" name="Default Changelist" comment="&quot;check only phone for added in databases&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/date_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/date_parser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opera_driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/opera_driver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/urls_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/urls_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/write_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/write_csv.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,11 +70,11 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../prosuct_recommendation_bm" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.date_parser">
     <configuration name="date_parser" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="avitoparser" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -103,6 +107,42 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="urls_parser" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="avitoparser" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <EXTENSION ID="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" />
+        </ENTRIES>
+      </EXTENSION>
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/urls_parser.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.date_parser" />
+      <item itemvalue="Python.urls_parser" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -154,7 +194,13 @@
       <workItem from="1594448875218" duration="14939000" />
       <workItem from="1594478017872" duration="159000" />
       <workItem from="1594622382989" duration="11280000" />
-      <workItem from="1594639659494" duration="2553000" />
+      <workItem from="1594639659494" duration="3724000" />
+      <workItem from="1594706135693" duration="8146000" />
+      <workItem from="1594790587632" duration="1188000" />
+      <workItem from="1595313627987" duration="1076000" />
+      <workItem from="1595332285617" duration="20000" />
+      <workItem from="1595421638750" duration="1179000" />
+      <workItem from="1595482312157" duration="2442000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;first&quot;">
       <created>1593149471505</created>
@@ -226,7 +272,21 @@
       <option name="project" value="LOCAL" />
       <updated>1594639536005</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="&quot;add checks on adsremoved on publication, add check on prce, description&quot;">
+      <created>1594642916667</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1594642916667</updated>
+    </task>
+    <task id="LOCAL-00012" summary="&quot;check only phone for added in databases&quot;">
+      <created>1594643063807</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1594643063807</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,59 +311,60 @@
     <MESSAGE value="&quot;micro fix&quot;" />
     <MESSAGE value="&quot;add write_csv.py, find request by url and save in csv&quot;" />
     <MESSAGE value="&quot;add checks on adsremoved on publication, add check on prce, description&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;add checks on adsremoved on publication, add check on prce, description&quot;" />
+    <MESSAGE value="&quot;check only phone for added in databases&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;check only phone for added in databases&quot;" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="262" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593678776725">
+    <state x="262" y="104" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594707232479">
       <screen x="0" y="32" width="1600" height="868" />
     </state>
     <state x="314" y="134" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1593521828140" />
-    <state x="262" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.32.1600.868@0.32.1600.868" timestamp="1593678776725" />
-    <state x="571" y="141" width="424" height="484" key="FileChooserDialogImpl" timestamp="1594478175447">
+    <state x="262" y="104" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.32.1600.868@0.32.1600.868" timestamp="1594707232479" />
+    <state x="571" y="93" width="424" height="484" key="FileChooserDialogImpl" timestamp="1595488658324">
       <screen x="0" y="32" width="1600" height="868" />
     </state>
     <state x="685" y="237" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1593521826836" />
-    <state x="571" y="141" width="454" height="517" key="FileChooserDialogImpl/0.32.1600.868@0.32.1600.868" timestamp="1594478175447" />
-    <state width="1554" height="270" key="GridCell.Tab.0.bottom" timestamp="1594639640149">
+    <state x="571" y="93" width="454" height="517" key="FileChooserDialogImpl/0.32.1600.868@0.32.1600.868" timestamp="1595488658324" />
+    <state width="1554" height="270" key="GridCell.Tab.0.bottom" timestamp="1594716606972">
       <screen x="0" y="32" width="1600" height="868" />
     </state>
     <state width="1874" height="489" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1593591777509" />
-    <state width="1554" height="270" key="GridCell.Tab.0.bottom/0.32.1600.868@0.32.1600.868" timestamp="1594639640149" />
-    <state width="1554" height="270" key="GridCell.Tab.0.center" timestamp="1594639640148">
+    <state width="1554" height="270" key="GridCell.Tab.0.bottom/0.32.1600.868@0.32.1600.868" timestamp="1594716606972" />
+    <state width="1554" height="270" key="GridCell.Tab.0.center" timestamp="1594716606972">
       <screen x="0" y="32" width="1600" height="868" />
     </state>
     <state width="1874" height="489" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1593591777509" />
-    <state width="1554" height="270" key="GridCell.Tab.0.center/0.32.1600.868@0.32.1600.868" timestamp="1594639640148" />
-    <state width="1554" height="270" key="GridCell.Tab.0.left" timestamp="1594639640147">
+    <state width="1554" height="270" key="GridCell.Tab.0.center/0.32.1600.868@0.32.1600.868" timestamp="1594716606972" />
+    <state width="1554" height="270" key="GridCell.Tab.0.left" timestamp="1594716606971">
       <screen x="0" y="32" width="1600" height="868" />
     </state>
     <state width="1874" height="489" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1593591777508" />
-    <state width="1554" height="270" key="GridCell.Tab.0.left/0.32.1600.868@0.32.1600.868" timestamp="1594639640147" />
-    <state width="1554" height="270" key="GridCell.Tab.0.right" timestamp="1594639640148">
+    <state width="1554" height="270" key="GridCell.Tab.0.left/0.32.1600.868@0.32.1600.868" timestamp="1594716606971" />
+    <state width="1554" height="270" key="GridCell.Tab.0.right" timestamp="1594716606972">
       <screen x="0" y="32" width="1600" height="868" />
     </state>
     <state width="1874" height="489" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1593591777509" />
-    <state width="1554" height="270" key="GridCell.Tab.0.right/0.32.1600.868@0.32.1600.868" timestamp="1594639640148" />
-    <state width="1554" height="270" key="GridCell.Tab.1.bottom" timestamp="1594639640151">
+    <state width="1554" height="270" key="GridCell.Tab.0.right/0.32.1600.868@0.32.1600.868" timestamp="1594716606972" />
+    <state width="1554" height="270" key="GridCell.Tab.1.bottom" timestamp="1594716606973">
       <screen x="0" y="32" width="1600" height="868" />
     </state>
     <state width="1874" height="489" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1593591777510" />
-    <state width="1554" height="270" key="GridCell.Tab.1.bottom/0.32.1600.868@0.32.1600.868" timestamp="1594639640151" />
-    <state width="1554" height="270" key="GridCell.Tab.1.center" timestamp="1594639640150">
+    <state width="1554" height="270" key="GridCell.Tab.1.bottom/0.32.1600.868@0.32.1600.868" timestamp="1594716606973" />
+    <state width="1554" height="270" key="GridCell.Tab.1.center" timestamp="1594716606973">
       <screen x="0" y="32" width="1600" height="868" />
     </state>
     <state width="1874" height="489" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1593591777510" />
-    <state width="1554" height="270" key="GridCell.Tab.1.center/0.32.1600.868@0.32.1600.868" timestamp="1594639640150" />
-    <state width="1554" height="270" key="GridCell.Tab.1.left" timestamp="1594639640149">
+    <state width="1554" height="270" key="GridCell.Tab.1.center/0.32.1600.868@0.32.1600.868" timestamp="1594716606973" />
+    <state width="1554" height="270" key="GridCell.Tab.1.left" timestamp="1594716606972">
       <screen x="0" y="32" width="1600" height="868" />
     </state>
     <state width="1874" height="489" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1593591777509" />
-    <state width="1554" height="270" key="GridCell.Tab.1.left/0.32.1600.868@0.32.1600.868" timestamp="1594639640149" />
-    <state width="1554" height="270" key="GridCell.Tab.1.right" timestamp="1594639640150">
+    <state width="1554" height="270" key="GridCell.Tab.1.left/0.32.1600.868@0.32.1600.868" timestamp="1594716606972" />
+    <state width="1554" height="270" key="GridCell.Tab.1.right" timestamp="1594716606973">
       <screen x="0" y="32" width="1600" height="868" />
     </state>
     <state width="1874" height="489" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1593591777510" />
-    <state width="1554" height="270" key="GridCell.Tab.1.right/0.32.1600.868@0.32.1600.868" timestamp="1594639640150" />
+    <state width="1554" height="270" key="GridCell.Tab.1.right/0.32.1600.868@0.32.1600.868" timestamp="1594716606973" />
     <state width="263" height="500" key="HiddenNamespacesPopup" timestamp="1593443399642">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -312,11 +373,11 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="508" y="215" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1593426784150" />
-    <state x="398" y="72" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1594639538175">
+    <state x="398" y="56" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1594643065393">
       <screen x="0" y="32" width="1600" height="868" />
     </state>
     <state x="478" y="211" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1593446427860" />
-    <state x="398" y="72" width="800" height="560" key="Vcs.Push.Dialog.v2/0.32.1600.868@0.32.1600.868" timestamp="1594639538175" />
+    <state x="398" y="56" width="800" height="560" key="Vcs.Push.Dialog.v2/0.32.1600.868@0.32.1600.868" timestamp="1594643065393" />
     <state width="800" height="435" key="XDebugger.FullValuePopup" timestamp="1593607108575">
       <screen x="0" y="32" width="1600" height="868" />
     </state>
@@ -336,22 +397,17 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/urls_parser.py</url>
-          <line>71</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/date_parser.py</url>
-          <line>114</line>
-          <option name="timeStamp" value="4" />
+          <line>22</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/avitoparser$urls_parser.coverage" NAME="urls_parser Coverage Results" MODIFIED="1593601906462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/avitoparser$urls_parser.coverage" NAME="urls_parser Coverage Results" MODIFIED="1594709029384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/avitoparser_v4$parser.coverage" NAME="urls_parser Coverage Results" MODIFIED="1593528692030" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/avitoparser$date_parser.coverage" NAME="date_parser Coverage Results" MODIFIED="1594642782998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/avitoparser$date_parser.coverage" NAME="date_parser Coverage Results" MODIFIED="1594713623975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/avitoparser_v4$urls_parser.coverage" NAME="urls_parser Coverage Results" MODIFIED="1593591728980" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

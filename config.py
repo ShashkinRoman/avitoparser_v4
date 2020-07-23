@@ -64,6 +64,11 @@ class Urls(object):
             url = 'https://www.avito.ru/' + region \
                   + '/kvartiry/prodam/studii/vtorichka-ASgBAQICAUSSA8YQAkDmBxSMUsoIFP5Y' \
                   + avito_request + '?p='
+        if self.object_parse == 'transport_perevozki':
+            url = 'https://www.avito.ru/' + region \
+                  + '/predlozheniya_uslug/transport_perevozki-ASgBAgICAUSYC8SfAQ' + '?p='
+                  # + avito_request + \
+
         return url
 
 

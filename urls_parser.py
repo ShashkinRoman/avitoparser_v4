@@ -64,8 +64,10 @@ def get_urls_from_page(url_page, ads_obj, session, request, region, proxy_list: 
 
 
 def main():
-    regions = json.loads(os.getenv('regions_for_pars'))
-    requests_ = json.loads(os.getenv('requests'))
+    # regions = json.loads(os.getenv('regions_for_pars'))
+    # requests_ = json.loads(os.getenv('requests'))
+    requests_ = ' '
+    regions = ['balakovo']
     proxy_list = proxy_parse(os.getenv('url_proxy'))
     for region in regions:
         for request in requests_:

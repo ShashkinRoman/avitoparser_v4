@@ -10,19 +10,22 @@ def find_request(session):
     dicts_with_date = []
     ads = session.query(InformationFromAds).all()
     for ad in ads:
-        request_ = session.query(UrlsForParse).\
-            filter(UrlsForParse.url == ad.url).first().request
-        ads_ = {"phone": ad.phone,
-                "request": request_,
-                "name": ad.name,
-                "title": ad.title,
-                "price": ad.price,
-                "place": ad.place,
-                "description": ad.description,
-                "type_ads": ad.type_ads,
-                "region": ad.region,
-                "url": ad.url}
-        dicts_with_date.append(ads_)
+        try:
+            request_ = session.query(UrlsForParse).\
+                filter(UrlsForParse.url == ad.url).first().request
+            ads_ = {"phone": ad.phone,
+                    "request": request_,
+                    "name": ad.name,
+                    "title": ad.title,
+                    "price": ad.price,
+                    "place": ad.place,
+                    "description": ad.description,
+                    "type_ads": ad.type_ads,
+                    "region": ad.region,
+                    "url": ad.url}
+            dicts_with_date.append(ads_)
+        except:
+            pass
     return dicts_with_date
 
 

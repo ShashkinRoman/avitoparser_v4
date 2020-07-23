@@ -8,7 +8,8 @@ path = (os.getenv('opera_profile_one'),
         # os.getenv('opera_profile_two'),
         # os.getenv('opera_profile_three'),
         # os.getenv('opera_profile_four'),
-        os.getenv('opera_profile_five'))
+        # os.getenv('opera_profile_five')
+        )
 
 
 class Operadriver():

@@ -36,8 +36,7 @@ def get_info_from_page(session, url, driver,
         print('Снято с публикации')
     else:
         try:
-            name2 = driver.find_elements_by_class_name('MXmyi')
-            name = name2[-1].text
+            name = driver.find_elements_by_class_name('MXmyi')[-1].text
         except:
             name = 'None'
             print('name None', url_page)
@@ -157,13 +156,13 @@ def main():
         driver = driver_class.opera(start_driver, path)
         drivers.append(driver)
 
-    with ThreadPoolExecutor(max_workers=2) as executor:
+    with ThreadPoolExecutor(max_workers=1) as executor:
         for driver in drivers:
             try:
                 executor.submit(navigate_ads_for_thread, urls_regions, session, driver,
                                 info_obj)
             except IndexError as e:
-                print('urls are over')
+                # print('urls are over')
                 print(e)
             session.commit()
     print("added ads {}".format(len(info_obj)))
