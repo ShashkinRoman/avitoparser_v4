@@ -25,6 +25,7 @@ class InformationFromAds(Base):
     __tablename__ = os.getenv('ads_tablename')
     id = Column(Integer, primary_key=True)
     phone = Column(String)
+    request = Column(String)
     name = Column(String)
     title = Column(String)
     price = Column(String)
@@ -34,8 +35,9 @@ class InformationFromAds(Base):
     region = Column(String)
     url = Column(String)
 
-    def __init__(self, phone, name, title, price, place, description, type_ads, region, url):
+    def __init__(self, phone, request, name, title, price, place, description, type_ads, region, url):
         self.phone = phone
+        self.request = request
         self.name = name
         self.title = title
         self.price = price
@@ -46,8 +48,8 @@ class InformationFromAds(Base):
         self.url = url
 
     def __repr__(self):
-        return "<InformationFromAds('%s','%s', '%s', '%s','%s', '%s', '%s','%s', '%s')>"\
-               % (self.phone, self.name, self.title,
+        return "<InformationFromAds('%s','%s', '%s', '%s','%s', '%s', '%s','%s', '%s', '%s')>"\
+               % (self.phone, self.request, self.name, self.title,
                   self.price, self.place, self.description,
                   self.type_ads, self.region, self.url)
 

@@ -15,7 +15,7 @@ from concurrent.futures.thread import ThreadPoolExecutor
 
 
 def get_info_from_page(session, url, driver,
-                       region, info_obj: list):
+                       region, info_obj: list, request):
     sleep(random.randint(2, 5))
     url_page = "https://m.avito.ru" + url
     driver.get(url_page)
@@ -103,6 +103,7 @@ def get_info_from_page(session, url, driver,
         # except:
         #     phone_number = 'None'
         ads_ = {"phone": phone_number,
+                "request": request,
                 "name": name,
                 "title": title,
                 "price": price,
@@ -133,8 +134,9 @@ def navigate_ads_for_thread(urls_regions, session, driver,
             urls_regions.remove(u)
             url = u[0]
             region = u[1]
+            request = u[2]
             get_info_from_page(session, url, driver, region,
-                            info_obj)
+                            info_obj, request)
             counter += 1
         except Exception as e:
             print(e)
@@ -151,7 +153,7 @@ def main():
     paths = path_drivers
     drivers = []
     urls_regions =[]
-    [urls_regions.append((url.url, url.region)) for url in urls_obj]
+    [urls_regions.append((url.url, url.region, url.request)) for url in urls_obj]
     for path in paths:
         driver = driver_class.opera(start_driver, path)
         drivers.append(driver)
