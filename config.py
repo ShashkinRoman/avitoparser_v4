@@ -1,15 +1,65 @@
 import os
+import sys
 from builtins import object
 import requests
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
-from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-from sqlalchemy.pool import StaticPool
 from fake_useragent import UserAgent
+import argparse
 load_dotenv()
+
+
+def create_parser():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-reg", "--region", nargs='+', default=['balakovo'],
+                        help="request for parse example: beauty_large, beauty_small, beauty_msk_mo or '[msk, ...]'")
+    parser.add_argument("-req", "--requests", nargs='+', default=['ресницы'],
+                        help="request for parse example: ресницы,брови")
+    parser.add_argument("-db", "--database", default='beauty',
+                        help="database for parse example: beauty_large, beauty_small, beauty_msk_mo")
+    parser.add_argument("-t", "--type", default='beauty',
+                        help="category for parse example:  beauty, nedvij")
+    parser.add_argument("-th", "--threads", default='1',
+                        help="number threads, default 1")
+    return parser
+
+
+def check_args():
+    parser = create_parser()
+    namespace = parser.parse_args(sys.argv[1:])
+    if namespace.region == ['beauty_large']:
+        regions = ["novosibirsk", "ekaterinburg", "nizhniy_novgorod", "kazan", "chelyabinsk", "omsk", "samara",
+                   "rostov-na-donu", "ufa", "krasnoyarsk", "voronezh", "perm", "volgograd", "krasnodar", "saratov",
+                   "tyumen", "tolyatti", "izhevsk", "barnaul", "ulyanovskaya_oblast", "irkutsk"]
+    if namespace.region == ['beauty_small']:
+        regions = ["habarovsk", "yaroslavl", "vladivostok", "mahachkala", "mahachkala", "orenburg", "kemerovo",
+                   "novokuznetsk", "ryazan", "astrahan", "naberezhnye_chelny", "penza", "kirovskaya_oblast_kirov",
+                   "lipetsk", "cheboksary", "balashiha", "kaliningrad", "tula", "kursk", "sevastopol", "sochi",
+                   "stavropol", "ulan-ude", "tver", "magnitogorsk", "ivanovo", "bryansk", "belgorod", "vladimir",
+                   "surgut", "nizhniy_tagil", "chita", "arhangelsk", "simferopol", "kaluga", "smolensk",
+                   "volgogradskaya_oblast_volzhskiy", "yakutsk", "saransk", "cherepovets", "kurgan", "vologda",
+                   "orel", "vladikavkaz", "podolsk", "groznyy", "murmansk", "tambov", "petrozavodsk", "sterlitamak",
+                   "nizhnevartovsk", "kostroma", "novorossiysk", "yoshkar-ola", "himki", "taganrog",
+                   "komsomolsk-na-amure", "syktyvkar", "nizhnekamsk", "nalchik", "shahty", "dzerzhinsk", "orsk",
+                   "bratsk", "amurskaya_oblast_blagoveschensk", "engels", "angarsk", "korolev", "velikiy_novgorod",
+                   "staryy_oskol", "mytischi", "pskov", "lyubertsy", "yuzhno-sahalinsk", "biysk", "prokopevsk",
+                   "armavir", "kaluga", "smolensk", "volgogradskaya_oblast_volzhskiy", "yakutsk", "saransk",
+                   "cherepovets", "kurgan", "vologda", "orel", "vladikavkaz", "podolsk", "groznyy", "murmansk",
+                   "tambov", "petrozavodsk", "sterlitamak", "nizhnevartovsk", "kostroma", "novorossiysk",
+                   "yoshkar-ola", "himki", "taganrog", "komsomolsk-na-amure", "syktyvkar", "nizhnekamsk", "nalchik",
+                   "shahty", "dzerzhinsk", "orsk", "bratsk", "amurskaya_oblast_blagoveschensk", "engels", "angarsk",
+                   "korolev", "velikiy_novgorod", "staryy_oskol", "mytischi", "pskov", "lyubertsy", "yuzhno-sahalinsk",
+                   "biysk", "prokopevsk", "armavir"]
+    if namespace.region == ['msk_mo']:
+        regions = ["moskva", "moskovskaya_oblast"]
+    else:
+        regions = namespace.region
+    requests = namespace.requests
+    database = namespace.database
+    type_ = namespace.type
+    threads = int(namespace.threads)
+    return regions, requests, database, type_, threads
 
 
 def proxy_parse(url_proxy):
@@ -51,8 +101,8 @@ def avito_request():
 class Urls(object):
     """ В зависимости от object_parse выбирает вариант сборки урла
     возвращает шаблон урла каталога """
-    def __init__(self):
-        self.object_parse = os.getenv('object_parse')
+    def __init__(self, obj_pars):
+        self.object_parse = obj_pars
 
     def urls(self, region, avito_request):
         if self.object_parse == 'beauty':
@@ -72,61 +122,10 @@ class Urls(object):
         return url
 
 
-Base = declarative_base()
-
-
-class InformationFromAds(Base):
-    __tablename__ = os.getenv('tablename')
-    id = Column(Integer, primary_key=True)
-    phone = Column(String)
-    name = Column(String)
-    title = Column(String)
-    price = Column(String)
-    place = Column(String)
-    description = Column(String)
-    type_ads = Column(String)
-    region = Column(String)
-    url = Column(String)
-
-    def __init__(self, phone, name, title, price, place, description, type_ads, region, url):
-        self.phone = phone
-        self.name = name
-        self.title = title
-        self.price = price
-        self.place = place
-        self.description = description
-        self.type_ads = type_ads
-        self.region = region
-        self.url = url
-
-    def __repr__(self):
-        return "<InformationFromAds('%s','%s', '%s', '%s','%s', '%s', '%s','%s', '%s')>"\
-               % (self.phone, self.name, self.title,
-                  self.price, self.place, self.description,
-                  self.type_ads, self.region, self.url)
-
-
-def session_db():
-    engine = create_engine('sqlite:///' + os.getenv('database_name') + '.db',
-                           connect_args={'check_same_thread': False},
-                           poolclass=StaticPool)
-    session_object = sessionmaker()
-    session_object.configure(bind=engine)
-    Base.metadata.create_all(engine)
-    session = session_object()
-    return session
-
-
-# test = InformationFromAds('phone', 'name', 'title', 'price', 'place', 'description', 'type_ads', 'region', 'url')
 def main():
-    # av_request = avito_request()
-    av_request = os.getenv('request_avito')
-    regions = os.getenv('regions')
-    ads_obj = Ads()
-    # object_parse = os.getenv('object_parse') #указываем для выбора формы урла
-    url_generator = Urls()
-    session = session_db()
-    return av_request, regions, ads_obj, url_generator, session
+    regions, av_request, database, object_parse, threads = check_args()
+    url_generator = Urls(object_parse)
+    return regions, av_request, url_generator, object_parse, database, threads
 
 
 if __name__ == '__main__':

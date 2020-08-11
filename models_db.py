@@ -5,10 +5,12 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.pool import StaticPool
+
+
 load_dotenv()
 
-
 Base = declarative_base()
+
 
 
 class UrlsForParse(Base):
@@ -54,9 +56,9 @@ class InformationFromAds(Base):
                   self.type_ads, self.region, self.url)
 
 
-def session_db():
-    engine = create_engine('sqlite:///' + os.getenv('database_name') + '.db',
-                           connect_args={'check_same_thread':  False},
+def session_db(database_name):
+    engine = create_engine('sqlite:///' + database_name + '.db',
+                           connect_args={'check_same_thread': False},
                            poolclass=StaticPool)
     session_object = sessionmaker()
     session_object.configure(bind=engine)

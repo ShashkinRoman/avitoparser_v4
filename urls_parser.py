@@ -1,33 +1,18 @@
-# todo проверять не только из бд есть ли дубли, но и из тез которые уже спарсили
 import os
-import json
 import random
 import requests
 from requests.exceptions import ProxyError, ChunkedEncodingError, ConnectionError
 from time import sleep
 from bs4 import BeautifulSoup
-from datetime import datetime, timedelta
-from config import Urls, session_db, proxy_parse, header_proxy
+from datetime import datetime
+from config import proxy_parse, header_proxy, main as conf_main
 from models_db import UrlsForParse, session_db
 from sqlalchemy.orm.exc import NoResultFound, MultipleResultsFound
-from fake_useragent import UserAgent
 from dotenv import load_dotenv
 load_dotenv()
 
 
 def get_urls_from_page(url_page, ads_obj, session, request, region, proxy_list: list, counter_proxy):
-    """
-
-    :param url_page:
-    :param ads_obj:
-    :param session:
-    :param request:
-    :param region:
-    :param proxy_list:
-    :param counter_proxy:
-    :return:
-    """
-
     try:
         header, proxies = header_proxy(proxy_list)
         html = requests.get(url_page, headers=header, proxies=proxies).text
@@ -66,14 +51,17 @@ def get_urls_from_page(url_page, ads_obj, session, request, region, proxy_list: 
 def main():
     # regions = json.loads(os.getenv('regions_for_pars'))
     # requests_ = json.loads(os.getenv('requests'))
-    requests_ = ' '
-    regions = ['balakovo']
+    regions, requests_, url_generator, object_parse, database, threads = conf_main()
+    session = session_db(database)
+    # regions, requests_, database, type_ = check_args()
+    # regions = ['balakovo']
     proxy_list = proxy_parse(os.getenv('url_proxy'))
     for region in regions:
         for request in requests_:
-            session = session_db()
+            # session = session_db()
             ads_obj = []
-            url = Urls().urls(region, request)
+            # url = Urls().urls(region, request)
+            url = url_generator.urls(region, request)
             counter = 0
             for i in range(1, 100):
                 start = len(ads_obj)
