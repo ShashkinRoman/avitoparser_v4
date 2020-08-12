@@ -12,9 +12,13 @@ load_dotenv()
 
 def create_parser():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-reg", "--region", nargs='+', default=['balakovo'],
+    parser.add_argument("-reg", "--region",
+                        nargs='+',
+                        default=['balakovo'],
                         help="request for parse example: beauty_large, beauty_small, beauty_msk_mo or '[msk, ...]'")
-    parser.add_argument("-req", "--requests", nargs='+', default=['ресницы'],
+    parser.add_argument("-req", "--requests",
+                        nargs='+',
+                        default=['ресницы'],
                         help="request for parse example: ресницы,брови")
     parser.add_argument("-db", "--database", default='beauty',
                         help="database for parse example: beauty_large, beauty_small, beauty_msk_mo")
@@ -28,37 +32,44 @@ def create_parser():
 def check_args():
     parser = create_parser()
     namespace = parser.parse_args(sys.argv[1:])
-    if namespace.region == ['beauty_large']:
-        regions = ["novosibirsk", "ekaterinburg", "nizhniy_novgorod", "kazan", "chelyabinsk", "omsk", "samara",
-                   "rostov-na-donu", "ufa", "krasnoyarsk", "voronezh", "perm", "volgograd", "krasnodar", "saratov",
-                   "tyumen", "tolyatti", "izhevsk", "barnaul", "ulyanovskaya_oblast", "irkutsk"]
-    if namespace.region == ['beauty_small']:
-        regions = ["habarovsk", "yaroslavl", "vladivostok", "mahachkala", "mahachkala", "orenburg", "kemerovo",
-                   "novokuznetsk", "ryazan", "astrahan", "naberezhnye_chelny", "penza", "kirovskaya_oblast_kirov",
-                   "lipetsk", "cheboksary", "balashiha", "kaliningrad", "tula", "kursk", "sevastopol", "sochi",
-                   "stavropol", "ulan-ude", "tver", "magnitogorsk", "ivanovo", "bryansk", "belgorod", "vladimir",
-                   "surgut", "nizhniy_tagil", "chita", "arhangelsk", "simferopol", "kaluga", "smolensk",
-                   "volgogradskaya_oblast_volzhskiy", "yakutsk", "saransk", "cherepovets", "kurgan", "vologda",
-                   "orel", "vladikavkaz", "podolsk", "groznyy", "murmansk", "tambov", "petrozavodsk", "sterlitamak",
-                   "nizhnevartovsk", "kostroma", "novorossiysk", "yoshkar-ola", "himki", "taganrog",
-                   "komsomolsk-na-amure", "syktyvkar", "nizhnekamsk", "nalchik", "shahty", "dzerzhinsk", "orsk",
-                   "bratsk", "amurskaya_oblast_blagoveschensk", "engels", "angarsk", "korolev", "velikiy_novgorod",
-                   "staryy_oskol", "mytischi", "pskov", "lyubertsy", "yuzhno-sahalinsk", "biysk", "prokopevsk",
-                   "armavir", "kaluga", "smolensk", "volgogradskaya_oblast_volzhskiy", "yakutsk", "saransk",
-                   "cherepovets", "kurgan", "vologda", "orel", "vladikavkaz", "podolsk", "groznyy", "murmansk",
-                   "tambov", "petrozavodsk", "sterlitamak", "nizhnevartovsk", "kostroma", "novorossiysk",
-                   "yoshkar-ola", "himki", "taganrog", "komsomolsk-na-amure", "syktyvkar", "nizhnekamsk", "nalchik",
-                   "shahty", "dzerzhinsk", "orsk", "bratsk", "amurskaya_oblast_blagoveschensk", "engels", "angarsk",
-                   "korolev", "velikiy_novgorod", "staryy_oskol", "mytischi", "pskov", "lyubertsy", "yuzhno-sahalinsk",
-                   "biysk", "prokopevsk", "armavir"]
-    if namespace.region == ['msk_mo']:
-        regions = ["moskva", "moskovskaya_oblast"]
-    else:
-        regions = namespace.region
+    reg = []
+    for i in namespace.region:
+        # print(i)
+        if i == 'beauty_large':
+            regions = reg + ["novosibirsk", "ekaterinburg", "nizhniy_novgorod", "kazan", "chelyabinsk", "omsk", "samara",
+                       "rostov-na-donu", "ufa", "krasnoyarsk", "voronezh", "perm", "volgograd", "krasnodar", "saratov",
+                       "tyumen", "tolyatti", "izhevsk", "barnaul", "ulyanovskaya_oblast", "irkutsk"]
+            # print('laaaaarge')
+        elif i == 'beauty_small':
+            regions = reg + ["habarovsk", "yaroslavl", "vladivostok", "mahachkala", "mahachkala", "orenburg", "kemerovo",
+                       "novokuznetsk", "ryazan", "astrahan", "naberezhnye_chelny", "penza", "kirovskaya_oblast_kirov",
+                       "lipetsk", "cheboksary", "balashiha", "kaliningrad", "tula", "kursk", "sevastopol", "sochi",
+                       "stavropol", "ulan-ude", "tver", "magnitogorsk", "ivanovo", "bryansk", "belgorod", "vladimir",
+                       "surgut", "nizhniy_tagil", "chita", "arhangelsk", "simferopol", "kaluga", "smolensk",
+                       "volgogradskaya_oblast_volzhskiy", "yakutsk", "saransk", "cherepovets", "kurgan", "vologda",
+                       "orel", "vladikavkaz", "podolsk", "groznyy", "murmansk", "tambov", "petrozavodsk", "sterlitamak",
+                       "nizhnevartovsk", "kostroma", "novorossiysk", "yoshkar-ola", "himki", "taganrog",
+                       "komsomolsk-na-amure", "syktyvkar", "nizhnekamsk", "nalchik", "shahty", "dzerzhinsk", "orsk",
+                       "bratsk", "amurskaya_oblast_blagoveschensk", "engels", "angarsk", "korolev", "velikiy_novgorod",
+                       "staryy_oskol", "mytischi", "pskov", "lyubertsy", "yuzhno-sahalinsk", "biysk", "prokopevsk",
+                       "armavir", "kaluga", "smolensk", "volgogradskaya_oblast_volzhskiy", "yakutsk", "saransk",
+                       "cherepovets", "kurgan", "vologda", "orel", "vladikavkaz", "podolsk", "groznyy", "murmansk",
+                       "tambov", "petrozavodsk", "sterlitamak", "nizhnevartovsk", "kostroma", "novorossiysk",
+                       "yoshkar-ola", "himki", "taganrog", "komsomolsk-na-amure", "syktyvkar", "nizhnekamsk", "nalchik",
+                       "shahty", "dzerzhinsk", "orsk", "bratsk", "amurskaya_oblast_blagoveschensk", "engels", "angarsk",
+                       "korolev", "velikiy_novgorod", "staryy_oskol", "mytischi", "pskov", "lyubertsy", "yuzhno-sahalinsk",
+                       "biysk", "prokopevsk", "armavir"]
+            # print('smaaaall')
+        elif i == 'msk_mo':
+            regions = reg + ["moskva", "moskovskaya_oblast"]
+        else:
+            regions = reg + namespace.region
     requests = namespace.requests
     database = namespace.database
     type_ = namespace.type
     threads = int(namespace.threads)
+
+
     return regions, requests, database, type_, threads
 
 

@@ -29,18 +29,18 @@ def get_info_from_page(session, url, driver,
         print('Снято с публикации')
     else:
         try:
-            name = driver.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[4]/div/a/div/div/div[1]/span[1]').text
+            name = driver.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[3]/div/div[1]/div/div[1]/div/h1').text
         except:
             name = 'None'
             print('name None', url_page)
         try:
-            title = driver.find_element_by_class_name('_3Yuc4').text
+            title = driver.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[2]/div/div[1]/div/div[1]/div/h1').text
         except:
             title = 'None'
             print('title None', url_page)
         try:
             price = driver.find_element_by_xpath(
-                '//*[@id="app"]/div/div[2]/div[2]/div/div[1]/div/div[2]/p/span/span').text[:-2]
+                '//*[@id="app"]/div/div[2]/div[3]/div/div[1]/div/div[2]/p/span/span').text[:-2]
         except:
             price = 'None'
             try:
@@ -52,24 +52,24 @@ def get_info_from_page(session, url, driver,
             except:
                 pass
         try:
-            place = driver.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[2]/div/div[4]/div/button/span[1]').text
+            place = driver.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[3]/div/div[4]/div/button/span[1]').text
         except:
             place = 'None'
             print('place None', url_page)
         try:
-            description = driver.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[3]/div[2]').text
+            description = driver.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[4]/div[2]/div[1]/div').text
         except:
             description = "None"
             print('description None', url_page)
         try:
-            type_ads = driver.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[4]/div/a/div/div/div[1]/span[2]').text
+            type_ads = driver.find_element_by_xpath('//*[@id="app"]/div/div[2]/div[5]/div/a/div/div/div[1]/span[3]').text
         except:
             type_ads = "None"
             print('type_ads None', url_page)
         # green button
         try:
             button_link = driver.find_element_by_xpath(
-                '//*[@id="app"]/div/div[2]/div[2]/div/div[2]/div/div/div[1]/div[1]')
+                '//*[@id="app"]/div/div[2]/div[3]/div/div[2]/div/div/div[1]/div[1]')
             button_link.click()
             sleep(2)
             # phone_number = ''

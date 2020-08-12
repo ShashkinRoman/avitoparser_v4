@@ -20,13 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e41516d8-5d73-4c20-ad56-fe634729f4fd" name="Default Changelist" comment="&quot;add request in model InfoFromAds &quot;">
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/date_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/date_parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example.py" beforeDir="false" afterPath="$PROJECT_DIR$/example.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/models_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opera_driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/opera_driver.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/urls_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/urls_parser.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,6 +70,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
@@ -212,6 +212,9 @@
       <workItem from="1596036408809" duration="42000" />
       <workItem from="1597128197435" duration="9219000" />
       <workItem from="1597143645819" duration="743000" />
+      <workItem from="1597151706630" duration="1351000" />
+      <workItem from="1597216895455" duration="3269000" />
+      <workItem from="1597221087679" duration="2062000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;first&quot;">
       <created>1593149471505</created>
@@ -355,50 +358,50 @@
       <screen x="0" y="32" width="1600" height="868" />
     </state>
     <state width="1225" height="506" key="DebuggerActiveHint/0.32.1600.868@0.32.1600.868" timestamp="1596027395041" />
-    <state x="571" y="45" width="424" height="484" key="FileChooserDialogImpl" timestamp="1596036443619">
-      <screen x="0" y="32" width="1600" height="868" />
+    <state x="685" y="237" width="424" height="484" key="FileChooserDialogImpl" timestamp="1597221101019">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="685" y="237" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1593521826836" />
+    <state x="685" y="237" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1597221101019" />
     <state x="571" y="45" width="454" height="517" key="FileChooserDialogImpl/0.32.1600.868@0.32.1600.868" timestamp="1596036443619" />
-    <state width="1554" height="238" key="GridCell.Tab.0.bottom" timestamp="1597144154986">
-      <screen x="0" y="32" width="1600" height="868" />
+    <state width="1317" height="471" key="GridCell.Tab.0.bottom" timestamp="1597153050217">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="489" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1593591777509" />
+    <state width="1317" height="471" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1597153050217" />
     <state width="1554" height="238" key="GridCell.Tab.0.bottom/0.32.1600.868@0.32.1600.868" timestamp="1597144154986" />
-    <state width="1554" height="238" key="GridCell.Tab.0.center" timestamp="1597144154982">
-      <screen x="0" y="32" width="1600" height="868" />
+    <state width="1317" height="471" key="GridCell.Tab.0.center" timestamp="1597153050215">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="489" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1593591777509" />
+    <state width="1317" height="471" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1597153050215" />
     <state width="1554" height="238" key="GridCell.Tab.0.center/0.32.1600.868@0.32.1600.868" timestamp="1597144154982" />
-    <state width="1554" height="238" key="GridCell.Tab.0.left" timestamp="1597144154980">
-      <screen x="0" y="32" width="1600" height="868" />
+    <state width="1317" height="471" key="GridCell.Tab.0.left" timestamp="1597153050214">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="489" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1593591777508" />
+    <state width="1317" height="471" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1597153050214" />
     <state width="1554" height="238" key="GridCell.Tab.0.left/0.32.1600.868@0.32.1600.868" timestamp="1597144154980" />
-    <state width="1554" height="238" key="GridCell.Tab.0.right" timestamp="1597144154983">
-      <screen x="0" y="32" width="1600" height="868" />
+    <state width="1317" height="471" key="GridCell.Tab.0.right" timestamp="1597153050216">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="489" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1593591777509" />
+    <state width="1317" height="471" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1597153050216" />
     <state width="1554" height="238" key="GridCell.Tab.0.right/0.32.1600.868@0.32.1600.868" timestamp="1597144154983" />
-    <state width="1554" height="238" key="GridCell.Tab.1.bottom" timestamp="1597144154996">
-      <screen x="0" y="32" width="1600" height="868" />
+    <state width="1317" height="471" key="GridCell.Tab.1.bottom" timestamp="1597153040484">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="489" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1593591777510" />
+    <state width="1317" height="471" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1597153040484" />
     <state width="1554" height="238" key="GridCell.Tab.1.bottom/0.32.1600.868@0.32.1600.868" timestamp="1597144154996" />
-    <state width="1554" height="238" key="GridCell.Tab.1.center" timestamp="1597144154991">
-      <screen x="0" y="32" width="1600" height="868" />
+    <state width="1317" height="471" key="GridCell.Tab.1.center" timestamp="1597153040482">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="489" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1593591777510" />
+    <state width="1317" height="471" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1597153040482" />
     <state width="1554" height="238" key="GridCell.Tab.1.center/0.32.1600.868@0.32.1600.868" timestamp="1597144154991" />
-    <state width="1554" height="238" key="GridCell.Tab.1.left" timestamp="1597144154989">
-      <screen x="0" y="32" width="1600" height="868" />
+    <state width="1317" height="471" key="GridCell.Tab.1.left" timestamp="1597153040481">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="489" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1593591777509" />
+    <state width="1317" height="471" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1597153040481" />
     <state width="1554" height="238" key="GridCell.Tab.1.left/0.32.1600.868@0.32.1600.868" timestamp="1597144154989" />
-    <state width="1554" height="238" key="GridCell.Tab.1.right" timestamp="1597144154993">
-      <screen x="0" y="32" width="1600" height="868" />
+    <state width="1317" height="471" key="GridCell.Tab.1.right" timestamp="1597153040483">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="489" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1593591777510" />
+    <state width="1317" height="471" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1597153040483" />
     <state width="1554" height="238" key="GridCell.Tab.1.right/0.32.1600.868@0.32.1600.868" timestamp="1597144154993" />
     <state width="263" height="500" key="HiddenNamespacesPopup" timestamp="1593443399642">
       <screen x="0" y="27" width="1920" height="1053" />
@@ -426,6 +429,10 @@
       <screen x="0" y="32" width="1600" height="868" />
     </state>
     <state x="100" y="116" width="1400" height="676" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.32.1600.868@0.32.1600.868" timestamp="1594302888405" />
+    <state x="731" y="467" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597151874257">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="731" y="467" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1920.1053@0.27.1920.1053" timestamp="1597151874257" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -446,22 +453,18 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/config.py</url>
-          <line>127</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/urls_parser.py</url>
-          <line>65</line>
+          <line>66</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/avitoparser$urls_parser.coverage" NAME="urls_parser Coverage Results" MODIFIED="1597144095443" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/avitoparser_v4$urls_parser.coverage" NAME="urls_parser Coverage Results" MODIFIED="1597152408845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/avitoparser_v4$parser.coverage" NAME="urls_parser Coverage Results" MODIFIED="1593528692030" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/avitoparser$urls_parser.coverage" NAME="urls_parser Coverage Results" MODIFIED="1597144095443" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/avitoparser$date_parser.coverage" NAME="date_parser Coverage Results" MODIFIED="1597144080556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/avitoparser_v4$urls_parser.coverage" NAME="urls_parser Coverage Results" MODIFIED="1593591728980" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/avitoparser_v4$date_parser.coverage" NAME="date_parser Coverage Results" MODIFIED="1597153114532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
